@@ -1,0 +1,11 @@
+version: '3'
+services:
+  matic_exporter:
+    build: .
+    ports:
+      - "5003:5003"
+      - "8017:8017"
+    environment:
+      - BSC_SCAN_API_KEY=your_api_key
+      - WALLET_ADDRESS=your_wallet_address
+    restart: always
